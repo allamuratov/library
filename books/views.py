@@ -19,3 +19,12 @@ class BookDeleteApiView(generics.DestroyAPIView):
 class BookUpdateApiView(generics.UpdateAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
+
+
+class BookListCreateApiView(generics.ListCreateAPIView):
+    queryset = Book.objects.all()
+    serializer_class = BookSerializer
+
+class BookRetrieveUpdateDeleteApiView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Book.objects.all()
+    serializer_class = BookSerializer
